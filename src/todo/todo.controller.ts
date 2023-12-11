@@ -1,18 +1,13 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { TodoService } from './todo.service';
+import { Tasks } from '../tasks/tasks.interface';
 
 @Controller()
 export class TodoController {
-  @Get('/tasks')
-  getAllTasks(): string {
-    return 'This is a list of tasks';
-  }
+  constructor(private readonly todoService: TodoService) {}
 
-  @Get('/tasks/:id')
-  getOneTask(@Param('id') id: string) {
-    return `${id}`;
-  }
-  @Post()
-  createTask(@Body() body: string) {
-    return `I am the ${body}`;
+  @Get('tasks')
+  getAllUsers(): Tasks[] {
+    return this.todoService.getAllUsers();
   }
 }
