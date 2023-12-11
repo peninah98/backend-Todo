@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller('todo')
+@Controller()
 export class TodoController {
   @Get('/tasks')
   getTasks(): string {
