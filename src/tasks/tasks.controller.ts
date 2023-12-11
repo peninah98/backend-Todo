@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { TodoService } from './todo.service';
+import { TodoService } from './tasks.service';
 
 @Controller()
 export class TodoController {
