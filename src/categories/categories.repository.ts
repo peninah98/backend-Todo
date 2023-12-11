@@ -1,9 +1,13 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { db } from 'src/main';
 
 @Injectable()
 export class CategoriesRepository {
   async getCategories() {
-    return await db.getData('/tasks');
+    try {
+      return await db.getData('/categories');
+    } catch (error) {
+      throw new InternalServerErrorException('Something went wrong !');
+    }
   }
 }
