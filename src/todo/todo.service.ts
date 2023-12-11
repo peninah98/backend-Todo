@@ -1,4 +1,4 @@
-import { Tasks } from './../tasks/tasks.interface';
+import { Tasks } from 'src/tasks/tasks.interface';
 import { Injectable } from '@nestjs/common';
 import { dummyTasks } from 'src/tasks/dummyTasks';
 
@@ -8,5 +8,8 @@ export class TodoService {
 
   getAllUsers(): Tasks[] {
     return this.tasks;
+  }
+  createTask(): Tasks[] {
+    return this.dummyTasks.push(Tasks);
   }
 }
