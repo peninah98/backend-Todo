@@ -1,9 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
+import { TodoService } from './todo.service';
+import { Tasks } from '../tasks/tasks.interface';
 
-@Controller('todo')
+@Controller()
 export class TodoController {
-  @Get('/tasks')
-  getTasks(): string {
-    return 'This is a list of tasks';
+  constructor(private readonly todoService: TodoService) {}
+
+  @Get('tasks')
+  getAllUsers(): Tasks[] {
+    return this.todoService.getAllUsers();
   }
 }
