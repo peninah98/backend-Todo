@@ -1,9 +1,13 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { db } from 'src/main';
 
 @Injectable()
 export class TasksRepository {
   async getTasks() {
-    return await db.getData('/tasks');
+    try {
+      return await db.getData('/tasks');
+    } catch (error) {
+      throw new InternalServerErrorException('Something went wrong');
+    }
   }
 }
