@@ -1,3 +1,4 @@
+import { CreateCategoriesDto } from './dto/create.categories.dto';
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { db } from 'src/main';
 
@@ -10,4 +11,14 @@ export class CategoriesRepository {
       throw new InternalServerErrorException('Something went wrong !');
     }
   }
+  async createCategories(body: CreateCategoriesDto) {
+    try {
+      return await db.push('/categories[]', { body }, true);
+    } catch (error) {
+      throw new InternalServerErrorException(
+        'Something went wrong cant post categories',
+      );
+    }
+  }
 }
+export { CreateCategoriesDto };
