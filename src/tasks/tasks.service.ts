@@ -11,4 +11,7 @@ export class TasksService {
   createTasks(body: CreateTasksDto) {
     return this.taskRepositiory.createTasks(body);
   }
+  getTaskById(id: string) {
+    return this.taskRepositiory.getTaskById(id);
+  }
 }

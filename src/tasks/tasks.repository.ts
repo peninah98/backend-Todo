@@ -1,5 +1,9 @@
 import { CreateTasksDto } from './dto/create.tasks.dto';
-import { Injectable, InternalServerErrorException } from '@nestjs/common';
+import {
+  Injectable,
+  InternalServerErrorException,
+  NotFoundException,
+} from '@nestjs/common';
 import { db } from 'src/main';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -17,12 +21,25 @@ export class TasksRepository {
     try {
       const id = uuidv4();
       const newTask = { id, ...body };
-      await db.push('/tasks[]', newTask);
+      await db.push('/tasks[]', newTask, true);
       return newTask;
     } catch (error) {
       throw new InternalServerErrorException(
         "Something went wrong, can't create tasks",
       );
+    }
+  }
+
+  async getTaskById(id: string) {
+    try {
+      const tasks = await db.find('/tasks', (task) => task.id === id);
+      if (!tasks) {
+        throw new NotFoundException('Task not found');
+      }
+
+      return tasks;
+    } catch (error) {
+      throw new InternalServerErrorException('Something went wrong');
     }
   }
 }
