@@ -14,4 +14,7 @@ export class TasksService {
   getTaskById(id: string) {
     return this.taskRepositiory.getTaskById(id);
   }
+  deleteTask(id: string) {
+    return this.taskRepositiory.deleteTaskById(id);
+  }
 }

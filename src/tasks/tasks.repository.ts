@@ -42,4 +42,17 @@ export class TasksRepository {
       throw new InternalServerErrorException('Something went wrong');
     }
   }
+
+  async deleteTaskById(id: string) {
+    try {
+      const tasks = await db.getIndex('/tasks', id, 'id');
+      if (!tasks)
+        throw new InternalServerErrorException(
+          'You aare deleting empty database',
+        );
+      return db.delete(`/tasks[${tasks}]`);
+    } catch (error) {
+      throw new InternalServerErrorException('Delete failed');
+    }
+  }
 }
