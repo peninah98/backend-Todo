@@ -17,7 +17,7 @@ export class TasksRepository {
     try {
       const id = uuidv4();
       const newTask = { id, ...body };
-      await db.push('/tasks[]', newTask, true);
+      await db.push('/tasks[]', newTask);
       return newTask;
     } catch (error) {
       throw new InternalServerErrorException(
