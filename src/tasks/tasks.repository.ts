@@ -1,3 +1,4 @@
+import { Status } from './../status';
 import { CreateTasksDto } from './dto/create.tasks.dto';
 import {
   Injectable,
@@ -20,7 +21,11 @@ export class TasksRepository {
   async createTasks(body: CreateTasksDto) {
     try {
       const id = uuidv4();
-      const newTask = { id, ...body };
+      const newTask = {
+        id,
+        Status: body.status ? body.status : Status.OPEN,
+        ...body,
+      };
       await db.push('/tasks[]', newTask, true);
       return newTask;
     } catch (error) {
@@ -46,7 +51,7 @@ export class TasksRepository {
   async deleteTaskById(id: string) {
     try {
       const tasks = await db.getIndex('/tasks', id, 'id');
-      if (!tasks)
+      if (tasks < 0)
         throw new InternalServerErrorException(
           'You aare deleting empty database',
         );
