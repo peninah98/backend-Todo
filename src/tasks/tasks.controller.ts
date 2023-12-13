@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { CreateTasksDto } from './dto/create.tasks.dto';
-import { CategoriesService } from 'src/categories/categories.service';
+import { CategoriesService } from '../categories/categories.service';
 
 @Controller('tasks')
 export class TasksController {
@@ -26,7 +26,6 @@ export class TasksController {
   @Post()
   async createTasks(@Body(new ValidationPipe()) body: CreateTasksDto) {
     const categories = await this.categoriesService.getAllCategories();
-    console.log(categories);
     if (categories.length === 0) {
       throw new NotFoundException('No category foound');
     }

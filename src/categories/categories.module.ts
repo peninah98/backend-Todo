@@ -4,6 +4,7 @@ import { CategoriesRepository } from './categories.repository';
 import { CategoriesService } from './categories.service';
 import { TasksModule } from 'src/tasks/tasks.module';
 import { Config, JsonDB } from 'node-json-db';
+import { CategoriesController } from './categories.controller';
 
 @Module({
   controllers: [CategoriesController],
