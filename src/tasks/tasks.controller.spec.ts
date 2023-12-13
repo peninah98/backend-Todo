@@ -32,6 +32,9 @@ describe('TasksController', () => {
           categoryId: 'testCat',
         });
       },
+      deleteTask: () => {
+        return Promise.resolve();
+      },
     };
     fakeCategoryService = {
       getAllCategories() {
@@ -73,5 +76,9 @@ describe('TasksController', () => {
   it('Should get task by id', async () => {
     const taskById = await controller.getTaskById('234');
     expect(taskById).toBeInstanceOf(Object);
+  });
+  it('Should delete task by id', async () => {
+    const deletedTask = await controller.deleteTask('1234');
+    expect(deletedTask).toBeUndefined();
   });
 });
