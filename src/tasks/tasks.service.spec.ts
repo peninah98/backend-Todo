@@ -21,6 +21,9 @@ describe('TasksService', () => {
           status: Status.OPEN,
         } as CreateTasksDto);
       },
+      getTaskById: () => {
+        return Promise.resolve();
+      },
       deleteTaskById: () => {
         return Promise.resolve();
       },
@@ -48,5 +51,9 @@ describe('TasksService', () => {
   it('Should delete tasks', async () => {
     const deleteTask = await service.deleteTask('hdh');
     expect(deleteTask).toBeUndefined();
+  });
+  it('Should retrive task by id', async () => {
+    const retriveTask = await service.getTaskById('w34');
+    expect(retriveTask).toBeUndefined();
   });
 });
