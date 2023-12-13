@@ -11,8 +11,4 @@ export class CreateTasksDto {
   @IsString()
   @IsNotEmpty({ message: 'Title is required' })
   readonly description: string;
-
-  @IsString()
-  @IsNotEmpty()
-  readonly categoryId: string;
 }
