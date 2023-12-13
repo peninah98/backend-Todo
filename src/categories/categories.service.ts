@@ -1,15 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { CategoriesRepository } from './categories.repository';
-import { CreateCategoriesDto } from './dto/create.categories.dto';
 
 @Injectable()
 export class CategoriesService {
   constructor(private categoriesRepository: CategoriesRepository) {}
-
+  setRepository(categoriesRepository: CategoriesRepository) {
+    this.categoriesRepository = categoriesRepository;
+  }
   getAllCategories() {
     return this.categoriesRepository.getCategories();
   }
-  createCategories(body: CreateCategoriesDto) {
+  createCategories(body) {
     return this.categoriesRepository.createCategories(body);
   }
 }

@@ -1,4 +1,7 @@
+import { IsNotEmpty, IsString } from 'class-validator';
+
 export class CreateCategoriesDto {
-  readonly id: number;
+  @IsNotEmpty()
+  @IsString()
   readonly name: string;
 }

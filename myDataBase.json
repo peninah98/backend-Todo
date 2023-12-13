@@ -1,0 +1,37 @@
+{
+    "categories": [],
+    "tasks": [
+        {
+            "id": "d34046f1-3041-472d-b242-f94373f2415d",
+            "Status": "OPEN",
+            "title": "hahah",
+            "description": "hahahaha",
+            "categoryId": "75aeaf69-c149-4b1e-9153-dac03dc4687d"
+        },
+        {
+            "id": "85fca389-1a10-4b56-828a-4c8e008fc2fb",
+            "Status": "OPEN",
+            "title": "me",
+            "description": "hahahaha"
+        },
+        {
+            "id": "72384a43-ee1b-4d20-975a-ae19163c2c97",
+            "Status": "OPEN",
+            "title": "me",
+            "description": "test"
+        },
+        {
+            "id": "636c18ff-3362-4c54-8344-6143c0dfbd66",
+            "Status": "OPEN",
+            "title": "kigali",
+            "description": "test"
+        },
+        {
+            "id": "b45f65e9-89c9-43c2-83d9-a27274c15247",
+            "Status": "OPEN",
+            "title": "gym",
+            "description": "test",
+            "categoryId": "025e65ee-943d-4306-95d2-06bad155c63d"
+        }
+    ]
+}

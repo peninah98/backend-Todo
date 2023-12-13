@@ -1,6 +1,14 @@
+import { Status } from 'src/status';
+import { IsNotEmpty, IsString } from 'class-validator';
+
 export class CreateTasksDto {
-  readonly id: number;
+  @IsString()
+  @IsNotEmpty({ message: 'Title is required' })
   readonly title: string;
-  readonly status: string;
+
+  readonly status: Status;
+
+  @IsString()
+  @IsNotEmpty({ message: 'Title is required' })
   readonly description: string;
 }
