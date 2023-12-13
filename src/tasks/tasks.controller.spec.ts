@@ -23,6 +23,15 @@ describe('TasksController', () => {
           categoryId: 'hel-jsj',
         });
       },
+      getTaskById: () => {
+        return Promise.resolve({
+          id: '1234567890',
+          description: 'Test task',
+          status: Status.DONE,
+          title: 'Test Title',
+          categoryId: 'testCat',
+        });
+      },
     };
     fakeCategoryService = {
       getAllCategories() {
@@ -60,5 +69,9 @@ describe('TasksController', () => {
       title: 'Gteeting',
     });
     expect(newTask).toBeDefined();
+  });
+  it('Should get task by id', async () => {
+    const taskById = await controller.getTaskById('234');
+    expect(taskById).toBeInstanceOf(Object);
   });
 });
