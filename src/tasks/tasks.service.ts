@@ -4,17 +4,21 @@ import { CreateTasksDto } from './dto/create.tasks.dto';
 
 @Injectable()
 export class TasksService {
-  constructor(private taskRepositiory: TasksRepository) {}
+  constructor(private taskRepository: TasksRepository) {}
+
   getAllTasks() {
-    return this.taskRepositiory.getTasks();
+    return this.taskRepository.getTasks();
   }
+
   createTasks(body: CreateTasksDto) {
-    return this.taskRepositiory.createTasks(body);
+    return this.taskRepository.createTasks(body);
   }
+
   getTaskById(id: string) {
-    return this.taskRepositiory.getTaskById(id);
+    return this.taskRepository.getTaskById(id);
   }
+
   deleteTask(id: string) {
-    return this.taskRepositiory.deleteTaskById(id);
+    return this.taskRepository.deleteTaskById(id);
   }
 }

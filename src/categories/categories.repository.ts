@@ -1,7 +1,7 @@
-import { CreateCategoriesDto } from './dto/create.categories.dto';
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
-import { db } from 'src/main';
+import { db } from '../main';
 import { v4 as uuidv4 } from 'uuid';
+import { CategoryEntity } from './entity/categories.entity';
 
 @Injectable()
 export class CategoriesRepository {
@@ -12,7 +12,7 @@ export class CategoriesRepository {
       throw new InternalServerErrorException('Something went wrong !');
     }
   }
-  async createCategories(body: CreateCategoriesDto) {
+  async createCategories(body: CategoryEntity) {
     try {
       const generateId = uuidv4();
       const newCategory = { generateId, ...body };
@@ -25,4 +25,3 @@ export class CategoriesRepository {
     }
   }
 }
-export { CreateCategoriesDto };

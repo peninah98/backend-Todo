@@ -1,9 +1,33 @@
 {
-    "categories": [
+    "categories": [],
+    "tasks": [
         {
-            "generateId": "1e4ab6de-110d-4c5a-8df8-6994eccd78de",
-            "name": "me;"
+            "id": "af0eb9bf-08fd-40bd-a3aa-1c6fd46ac74a",
+            "Status": "OPEN",
+            "title": "ndumiwe",
+            "description": "hahahaha",
+            "categoryId": "75aeaf69-c149-4b1e-9153-dac03dc4687d"
+        },
+        {
+            "id": "f2b88897-4d42-44b8-928a-511beb48c8c1",
+            "Status": "OPEN",
+            "title": "ibintu birakaze",
+            "description": "hahahaha",
+            "categoryId": "75aeaf69-c149-4b1e-9153-dac03dc4687d"
+        },
+        {
+            "id": "8b0a5ec6-e343-450f-aa15-046ada5b27af",
+            "Status": "OPEN",
+            "title": "Sky will turn blue",
+            "description": "hahahaha",
+            "categoryId": "75aeaf69-c149-4b1e-9153-dac03dc4687d"
+        },
+        {
+            "id": "f0dce22c-e6bd-474a-988b-39e5c3f7b3f6",
+            "Status": "OPEN",
+            "title": "Yes od course",
+            "description": "hahahaha",
+            "categoryId": "75aeaf69-c149-4b1e-9153-dac03dc4687d"
         }
-    ],
-    "tasks": []
+    ]
 }

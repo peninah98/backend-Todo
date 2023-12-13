@@ -1,11 +1,10 @@
 import { Status } from './../status';
-import { CreateTasksDto } from './dto/create.tasks.dto';
 import {
   Injectable,
   InternalServerErrorException,
   NotFoundException,
 } from '@nestjs/common';
-import { db } from 'src/main';
+import { db } from '../main';
 import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
@@ -18,7 +17,7 @@ export class TasksRepository {
     }
   }
 
-  async createTasks(body: CreateTasksDto) {
+  async createTasks(body) {
     try {
       const id = uuidv4();
       const newTask = {

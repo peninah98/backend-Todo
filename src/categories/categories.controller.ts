@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
-import { CreateCategoriesDto } from './categories.repository';
+import { CreateCategoriesDto } from './dto/create.categories.dto';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('categories')
