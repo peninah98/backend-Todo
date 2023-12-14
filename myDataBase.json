@@ -1,5 +1,18 @@
 {
-    "categories": [],
+    "categories": [
+        {
+            "id": "fcc67e15-dce9-432b-be42-a2bbebf0972b",
+            "name": "je"
+        },
+        {
+            "id": "ab949133-41b8-499b-bfed-c65a567e0cec",
+            "name": "Debugger"
+        },
+        {
+            "id": "a0581951-a694-4f46-8255-b47aaf6a5269",
+            "name": "Elsie"
+        }
+    ],
     "tasks": [
         {
             "id": "d34046f1-3041-472d-b242-f94373f2415d",

@@ -16,7 +16,7 @@ describe('TasksController', () => {
       },
       createTasks: () => {
         return Promise.resolve({
-          id: '1',
+          id: 'b45f65e9-89c9-43c2-83d9-a27274c15247',
           description: 'hello there',
           status: Status.OPEN,
           title: 'Gteeting',
@@ -25,7 +25,7 @@ describe('TasksController', () => {
       },
       getTaskById: () => {
         return Promise.resolve({
-          id: '1234567890',
+          id: 'b45f65e9-89c9-43c2-83d9-a27274c15247',
           description: 'Test task',
           status: Status.DONE,
           title: 'Test Title',
@@ -74,11 +74,15 @@ describe('TasksController', () => {
     expect(newTask).toBeDefined();
   });
   it('Should get task by id', async () => {
-    const taskById = await controller.getTaskById('234');
+    const taskById = await controller.getTaskById(
+      'b45f65e9-89c9-43c2-83d9-a27274c15247',
+    );
     expect(taskById).toBeInstanceOf(Object);
   });
   it('Should delete task by id', async () => {
-    const deletedTask = await controller.deleteTask('1234');
+    const deletedTask = await controller.deleteTask(
+      'b45f65e9-89c9-43c2-83d9-a27274c15247',
+    );
     expect(deletedTask).toBeUndefined();
   });
 });

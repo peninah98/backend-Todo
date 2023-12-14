@@ -10,7 +10,7 @@ describe('CategoriesService', () => {
     fakeCategoryRepository = {
       createCategories: () => {
         return Promise.resolve({
-          id: 'hello',
+          id: 'b45f65e9-89c9-43c2-83d9-a27274c15247',
           name: 'jajadf',
         });
       },
@@ -36,7 +36,7 @@ describe('CategoriesService', () => {
   });
   it('Should retun the array of iteme', async () => {
     const result = await service.createCategories({
-      id: 'hello',
+      id: 'b45f65e9-89c9-43c2-83d9-a27274c15247',
       name: 'jajadf',
     });
     expect(result).toBeDefined();

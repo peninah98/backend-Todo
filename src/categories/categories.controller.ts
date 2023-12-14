@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, ValidationPipe } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
 import { CreateCategoriesDto } from './dto/create.categories.dto';
 import { ApiTags } from '@nestjs/swagger';
@@ -14,7 +14,7 @@ export class CategoriesController {
   }
 
   @Post()
-  createCategories(@Body() body: CreateCategoriesDto) {
+  createCategories(@Body(new ValidationPipe()) body: CreateCategoriesDto) {
     return this.categoriesService.createCategories(body);
   }
 }
