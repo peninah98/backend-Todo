@@ -49,11 +49,15 @@ describe('TasksService', () => {
     expect(tasks).toBeUndefined();
   });
   it('Should delete tasks', async () => {
-    const deleteTask = await service.deleteTask('hdh');
+    const deleteTask = await service.deleteTask(
+      'b45f65e9-89c9-43c2-83d9-a27274c15247',
+    );
     expect(deleteTask).toBeUndefined();
   });
   it('Should retrive task by id', async () => {
-    const retriveTask = await service.getTaskById('w34');
+    const retriveTask = await service.getTaskById(
+      'b45f65e9-89c9-43c2-83d9-a27274c15247',
+    );
     expect(retriveTask).toBeUndefined();
   });
 });
