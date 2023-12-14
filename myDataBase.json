@@ -15,13 +15,6 @@
     ],
     "tasks": [
         {
-            "id": "d34046f1-3041-472d-b242-f94373f2415d",
-            "Status": "OPEN",
-            "title": "hahah",
-            "description": "hahahaha",
-            "categoryId": "75aeaf69-c149-4b1e-9153-dac03dc4687d"
-        },
-        {
             "id": "85fca389-1a10-4b56-828a-4c8e008fc2fb",
             "Status": "OPEN",
             "title": "me",
@@ -45,6 +38,12 @@
             "title": "gym",
             "description": "test",
             "categoryId": "025e65ee-943d-4306-95d2-06bad155c63d"
+        },
+        {
+            "id": "7ff7d0b6-b87a-401f-8cc5-2a724b7bd2fb",
+            "Status": "OPEN",
+            "title": "Hello there!",
+            "description": "I would like to join you, in the upcoming event of Life on the moon"
         }
     ]
 }
