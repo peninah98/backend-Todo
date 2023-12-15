@@ -1,4 +1,4 @@
-import { Module, forwardRef } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { TasksController } from './tasks.controller';
 import { TasksService } from './tasks.service';
 import { TasksRepository } from './tasks.repository';
@@ -16,6 +16,6 @@ import { Config, JsonDB } from 'node-json-db';
     },
   ],
   exports: [TasksRepository, TasksService],
-  imports: [forwardRef(() => CategoriesModule)],
+  imports: [CategoriesModule],
 })
 export class TasksModule {}
