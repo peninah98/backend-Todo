@@ -1,13 +1,4 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  NotFoundException,
-  Param,
-  Post,
-  ValidationPipe,
-} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { CreateTasksDto } from './dto/create.tasks.dto';
 import { CategoriesService } from '../categories/categories.service';
@@ -35,14 +26,8 @@ export class TasksController {
     type: CreateTasksDto,
     description: 'Task structure',
   })
-  async createTasks(@Body(new ValidationPipe()) body: CreateTasksDto) {
-    const categories = await this.categoriesService.getAllCategories();
-    if (categories.length === 0) {
-      throw new NotFoundException('No category foound');
-    }
-    const categoryId = categories.slice(-1)[0].generateId;
-    const newBody = { ...body, categoryId };
-    return this.taskServices.createTasks(newBody);
+  async createTasks(@Body() body) {
+    return this.taskServices.createTasks(body);
   }
 
   @Get(':id')
