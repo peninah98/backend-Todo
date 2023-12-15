@@ -1,1 +1,49 @@
-{"categories":[],"tasks":[]}
+{
+    "categories": [
+        {
+            "id": "fcc67e15-dce9-432b-be42-a2bbebf0972b",
+            "name": "je"
+        },
+        {
+            "id": "ab949133-41b8-499b-bfed-c65a567e0cec",
+            "name": "Debugger"
+        },
+        {
+            "id": "a0581951-a694-4f46-8255-b47aaf6a5269",
+            "name": "Elsie"
+        }
+    ],
+    "tasks": [
+        {
+            "id": "85fca389-1a10-4b56-828a-4c8e008fc2fb",
+            "Status": "OPEN",
+            "title": "me",
+            "description": "hahahaha"
+        },
+        {
+            "id": "72384a43-ee1b-4d20-975a-ae19163c2c97",
+            "Status": "OPEN",
+            "title": "me",
+            "description": "test"
+        },
+        {
+            "id": "636c18ff-3362-4c54-8344-6143c0dfbd66",
+            "Status": "OPEN",
+            "title": "kigali",
+            "description": "test"
+        },
+        {
+            "id": "b45f65e9-89c9-43c2-83d9-a27274c15247",
+            "Status": "OPEN",
+            "title": "gym",
+            "description": "test",
+            "categoryId": "025e65ee-943d-4306-95d2-06bad155c63d"
+        },
+        {
+            "id": "7ff7d0b6-b87a-401f-8cc5-2a724b7bd2fb",
+            "Status": "OPEN",
+            "title": "Hello there!",
+            "description": "I would like to join you, in the upcoming event of Life on the moon"
+        }
+    ]
+}

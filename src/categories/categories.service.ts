@@ -8,4 +8,7 @@ export class CategoriesService {
   getAllCategories() {
     return this.categoriesRepository.getCategories();
   }
+  createCategories(body) {
+    return this.categoriesRepository.createCategories(body);
+  }
 }
